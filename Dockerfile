@@ -16,3 +16,9 @@ ADD requirements.txt /src/
 RUN pip install -r requirements.txt
 
 ADD . /src/
+
+# expose the port 8000
+EXPOSE 8000
+
+# define the default command to run when starting the container
+CMD ["gunicorn", "--chdir", "pywishproject", "--bind", ":8000", "pywishproject.wsgi:application"]
