@@ -3,11 +3,13 @@ version: '3'
 services:
   db:
     image: postgres
+    container_name: pywishdb
   web:
     build: .
+    container_name: pywishapp
     command: python3 pywishproject/manage.py runserver 0.0.0.0:8990
     ports:
-      - "8990:8990"
+      - "8991:8990"
     environment:
       - DB_NAME=postgres
       - DB_USER=postgres
