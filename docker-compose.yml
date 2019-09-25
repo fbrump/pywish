@@ -7,7 +7,8 @@ services:
   web:
     build: .
     deploy:
-      replicas: 3
+      mode: replicated
+      replicas: 2
     container_name: pywishapp
     environment:
       - DB_NAME=postgres
