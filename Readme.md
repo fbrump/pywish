@@ -8,7 +8,7 @@ The project that helps you to manage your wishes and collections like books, mov
 * You can create a wishlist;
 * You can manager the wishlist items;
 
-## How to start
+## How to start with docker-compose
 
 To run the project we just following the steps:
 
@@ -22,6 +22,28 @@ Next, create all migrations and apply they.
 docker exec pywishapp python3 pywishproject/manage.py makemigrations
 
 docker exec pywishapp python3 pywishproject/manage.py migrate
+```
+
+## How to start with Docker
+
+if you want just to run local with database, you can up the postgresql container with this command:
+
+```
+docker run --name pywish-postgresql -p 5031:5432 -e POSTGRES_DB=pywishdb -e POSTGRES_USER=pywishuser -e POSTGRES_PASSWORD=pywishpostgres -d postgres
+```
+
+Next, you start env of `pip`:
+
+```
+source env/Scripts/activate
+```
+
+Next, create all migrations and apply they.
+
+```
+python pywishproject/manage.py makemigrations
+
+python pywishproject/manage.py migrate
 ```
 
 ### Author
