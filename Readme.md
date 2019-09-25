@@ -32,6 +32,14 @@ docker exec pywishapp python3 pywishproject/manage.py migrate
 
 * 
 
+### Stack
+
+* Python 3
+* Django
+* PostgreSQL
+* NginX
+* unittest
+
 #### Licence
 
 GPL 2.0
