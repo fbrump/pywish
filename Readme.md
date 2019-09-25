@@ -8,6 +8,10 @@ The project that helps you to manage your wishes and collections like books, mov
 * You can create a wishlist;
 * You can manager the wishlist items;
 
+### Use Case
+
+* 
+
 ## How to start with docker-compose
 
 To run the project we just following the steps:
