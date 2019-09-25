@@ -4,12 +4,16 @@ services:
   db:
     image: postgres
     container_name: pywishdb
+    networks:
+      - db_network
   web:
     build: .
     deploy:
       mode: replicated
       replicas: 2
     container_name: pywishapp
+    ports:
+      - "8991:8000"
     environment:
       - DB_NAME=postgres
       - DB_USER=postgres
@@ -20,6 +24,7 @@ services:
       - db
     networks:
       - nginx_network
+      - db_network
   nginx:
     build:
       context: .
@@ -34,4 +39,6 @@ services:
 
 networks:
   nginx_network:
+    driver: bridge
+  db_network:
     driver: bridge
