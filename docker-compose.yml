@@ -9,8 +9,6 @@ services:
     deploy:
       replicas: 3
     container_name: pywishapp
-    # ports:
-    #   - "8991:8000"
     environment:
       - DB_NAME=postgres
       - DB_USER=postgres
