@@ -17,3 +17,20 @@ services:
       - DB_PORT=5432
     depends_on:
       - db
+    networks:
+      - nginx_network
+  nginx:
+    build:
+      context: .
+      dockerfile: nginx.Dockerfile
+    container_name: pywishgtw
+    ports:
+      - 8992:80
+    depends_on:
+      - web
+    networks: 
+      - nginx_network
+
+networks:
+  nginx_network:
+    driver: bridge
