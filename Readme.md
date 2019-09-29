@@ -28,6 +28,10 @@ docker exec pywishapp python3 pywishproject/manage.py makemigrations
 docker exec pywishapp python3 pywishproject/manage.py migrate
 ```
 
+Finelly you can acess this url:
+
+    http://localhost:8992
+
 ## How to start with Docker
 
 if you want just to run local with database, you can up the postgresql container with this command:
