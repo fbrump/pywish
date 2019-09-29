@@ -48,7 +48,7 @@ And start the env if you use Windows execute this:
 source env/Scripts/activate
 ```
 
-If you use Linux execute this:
+If you use Linux or MacOS execute this:
 
 ```
 source env/bin/activate
