@@ -36,10 +36,22 @@ if you want just to run local with database, you can up the postgresql container
 docker run --name pywish-postgresql -p 5031:5432 -e POSTGRES_DB=pywishdb -e POSTGRES_USER=pywishuser -e POSTGRES_PASSWORD=pywishpostgres -d postgres
 ```
 
-Next, you start env of `pip`:
+Next, you start env of `pip` creating new env if not extis:
+
+```
+virtualenv env
+```
+
+And start the env if you use Windows execute this:
 
 ```
 source env/Scripts/activate
+```
+
+If you use Linux execute this:
+
+```
+source env/bin/activate
 ```
 
 Next, create all migrations and apply they.
