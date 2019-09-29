@@ -10,6 +10,7 @@ The project that helps you to manage your wishes and collections like of things 
 
 ### Use Case
 
+* The user can list all wish list;
 * The user can create a wish list;
 * The user cannot create two or more wish lists with the same name;
 * The user can update wish list name and description;
