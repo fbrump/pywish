@@ -10,14 +10,22 @@ The project that helps you to manage your wishes and collections like of things 
 
 ### Use Case
 
-* The user can list all wish list;
+#### Wish List
+
 * The user can create a wish list;
 * The user cannot create two or more wish lists with the same name;
+* The user can list all wish list;
+* The user can filter your search by name and description
 * The user can update wish list name and description;
-* The user can turn on or off the wishl list;
+* The user cannot update the wish list with the name that it was exist.
+* The user can turn on or off the wish list;
+
+#### Wish List Item
+
 * The user can create items in wish list;
 * The user cannot create more then one item with the same name and code;
 * The user can list all items from one wish list;
+* The user can filter your search by wish list, activate on/off, name and description;
 * The user can turn on or off one item;
 * The user can update item code (external code), name and description;
 
