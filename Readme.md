@@ -79,11 +79,11 @@ python pywishproject/manage.py migrate
 
 ### Author
 
-* Felipe Brum
+* [Felipe Brum](https://github.com/fbrump/)
 
 ### Mantainers
 
-* ..
+* [Felipe Brum](https://github.com/fbrump/)
 
 ### Stack
 
