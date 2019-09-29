@@ -14,7 +14,6 @@ The project that helps you to manage your wishes and collections like of things 
 * The user cannot create two or more wish lists with the same name;
 * The user can update wish list name and description;
 * The user can turn on or off the wishl list;
-* The user can list all wish lists;
 * The user can create items in wish list;
 * The user cannot create more then one item with the same name and code;
 * The user can list all items from one wish list;
