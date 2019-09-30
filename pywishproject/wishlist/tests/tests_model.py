@@ -61,3 +61,20 @@ class WishListModelTests(TestCase):
             name=wishlist_name,
         )
         self.assertEqual(wishlist_name, str(wishlist))
+    
+    def test_when_create_without_user_return_blank(self):
+        wishlist_name = self.wishlist_name
+        created_by = None
+        wishlist = WishList.objects.create(
+            name=wishlist_name,
+        )
+        self.assertEqual('', wishlist.created_by)
+    
+    def test_when_create_with_user_return_user_name(self):
+        wishlist_name = self.wishlist_name
+        created_by = 'user_guest'
+        wishlist = WishList.objects.create(
+            name=wishlist_name,
+            created_by=created_by,
+        )
+        self.assertEqual(created_by, wishlist.created_by)
