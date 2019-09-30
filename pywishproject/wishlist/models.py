@@ -20,8 +20,8 @@ class WishList(models.Model):
     active = models.BooleanField(default=True)
     crated_on = models.DateField(auto_now=False, auto_now_add=True)
     crated_by = models.CharField(max_length=250)
-    updated_on = models.DateField(auto_now=False, auto_now_add=False)
-    updated_by = models.CharField(max_length=250, null=True)
+    updated_on = models.DateField(auto_now=True, auto_now_add=False, blank=True, null=True)
+    updated_by = models.CharField(max_length=250, blank=True, null=True, default='')
 
     def __str__(self):
         return '{}'.format(self.name)
