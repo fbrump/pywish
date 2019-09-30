@@ -18,8 +18,8 @@ class WishList(models.Model):
     name = models.CharField(max_length=250, unique=True)
     description = models.TextField(max_length=250, blank=True, null=True)
     active = models.BooleanField(default=True)
-    crated_on = models.DateField(auto_now=False, auto_now_add=True)
-    crated_by = models.CharField(max_length=250)
+    created_on = models.DateField(auto_now=False, auto_now_add=True)
+    created_by = models.CharField(max_length=250)
     updated_on = models.DateField(auto_now=True, auto_now_add=False, blank=True, null=True)
     updated_by = models.CharField(max_length=250, blank=True, null=True, default='')
 
