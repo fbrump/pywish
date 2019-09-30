@@ -70,6 +70,16 @@ class WishListModelTests(TestCase):
         )
         self.assertEqual('', wishlist.created_by)
     
+    def test_when_create_with_user_none_return_exception(self):
+        wishlist_name = self.wishlist_name
+        created_by = None
+        with self.assertRaises(IntegrityError) as context:
+            wishlist = WishList.objects.create(
+                name=wishlist_name,
+                created_by=created_by,
+            )
+        self.assertIn('null value in column "created_by" violates not-null constraint', str(context.exception))
+    
     def test_when_create_with_user_return_user_name(self):
         wishlist_name = self.wishlist_name
         created_by = 'user_guest'
