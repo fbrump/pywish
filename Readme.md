@@ -63,19 +63,19 @@ docker run --name pywish-postgresql -p 5031:5432 -e POSTGRES_DB=pywishdb -e POST
 Next, you start env of `pip` creating new env if not extis:
 
 ```bash
-virtualenv env
+virtualenv venv
 ```
 
 And start the env if you use Windows execute this:
 
 ```bash
-source env/Scripts/activate
+source venv/Scripts/activate
 ```
 
 If you use Linux or MacOS execute this:
 
 ```bash
-source env/bin/activate
+source venv/bin/activate
 ```
 
 Next, create all migrations and apply they.
