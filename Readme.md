@@ -66,6 +66,12 @@ Next, you start env of `pip` creating new env if not extis:
 virtualenv venv
 ```
 
+So, with its you can add all requerements in you env:
+
+```
+pip3 install -r requirements.txt
+```
+
 And start the env if you use Windows execute this:
 
 ```bash
