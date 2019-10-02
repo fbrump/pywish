@@ -1,7 +1,7 @@
 from django.test import TestCase
 from django.db.utils import IntegrityError
 
-from wishlist.models import WishList
+from ..models import WishList
 
 class WishListModelTests(TestCase):
     def setUp(self):
