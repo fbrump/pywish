@@ -8,7 +8,7 @@ from rest_framework.test import APIClient
 from ..models import WishList
 from ..serializers import WishListSerializer
 
-WISH_LIST_URL = reverse('wishlist:list')
+WISH_LIST_URL = reverse('api-list')
 
 class WishListApiTest(TestCase):
     def setUp(self):
