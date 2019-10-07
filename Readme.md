@@ -21,8 +21,6 @@ This application will help you manage your wishes and create collections of thin
 * The user cannot create two or more wish-lists with the same name;
 * The user cannot update the wish-list to share a name with another list;
 
-
-
 #### Wish List Item
 
 * The user can create items within wish-lists;
@@ -70,7 +68,7 @@ virtualenv venv
 
 Now, you can add all requirements to your env:
 
-```
+```python
 pip3 install -r requirements.txt
 ```
 
