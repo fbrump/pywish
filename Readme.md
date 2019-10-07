@@ -56,7 +56,7 @@ Finally, you can access this url:
 
 ## How to start with Docker
 
-In order to run local with database, you can up the postresql container with this command:
+In order to run local with database, you can up the PostgreSQL container with this command:
 
 ```yml
 docker run --name pywish-postgresql -p 5031:5432 -e POSTGRES_DB=pywishdb -e POSTGRES_USER=pywishuser -e POSTGRES_PASSWORD=pywishpostgres -d postgres
