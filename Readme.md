@@ -90,6 +90,9 @@ Next, create all migrations and apply them.
 python pywishproject/manage.py makemigrations
 
 python pywishproject/manage.py migrate
+
+python manage.py createsuperuser --username=admin --email=admin@pywishproject.com
+
 ```
 
 ### Author

@@ -10,7 +10,7 @@ class WishListViewSet(viewsets.GenericViewSet,
                       mixins.CreateModelMixin):
     queryset = WishList.objects.all()
     serializer_class = WishListSerializer
-    authentication_classes = (TokenAuthentication,)
+    # authentication_classes = (TokenAuthentication,)
     permission_classes = (IsAuthenticated,)
     
     def get_queryset(self):
