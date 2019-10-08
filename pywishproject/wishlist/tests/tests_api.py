@@ -79,3 +79,21 @@ class WishListApiTest(TestCase):
             active = True,
         )
         self.assertTrue(1 == len(wish_active))
+    
+    def test_try_to_create_two_wish_lists_with_same_name_return_exception(self):
+        payload = {
+            'name': 'Games'
+        }
+        response = self.client.post(WISH_LIST_URL, payload)
+        self.assertEqual(response.status_code, status.HTTP_201_CREATED)
+        payload = {
+            'name': 'Games'
+        }
+        response = self.client.post(WISH_LIST_URL, payload)
+        self.assertEqual(response.status_code, status.HTTP_400_BAD_REQUEST)
+        wish_active = WishList.objects.filter(
+            created_by = self.user.get_username(),
+            name = payload['name'],
+            active = True,
+        )
+        self.assertTrue(1 == len(wish_active))
