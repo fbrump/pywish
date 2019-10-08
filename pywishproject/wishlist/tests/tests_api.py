@@ -55,3 +55,27 @@ class WishListApiTest(TestCase):
             name = payload['name'],
         ).exists()
         self.assertTrue(exists)
+    
+    def test_create_wish_list_active_and_reutrn_just_active_successful(self):
+        payload = {
+            'name': 'Games'
+        }
+        response = self.client.post(WISH_LIST_URL, payload)
+        self.assertEqual(response.status_code, status.HTTP_201_CREATED)
+        payload_projects = {
+            'name': 'Projects',
+            'active': True
+        }
+        response_projects = self.client.post(WISH_LIST_URL, payload_projects)
+        self.assertEqual(response_projects.status_code, status.HTTP_201_CREATED)
+        payload = {
+            'name': 'Notebooks'
+        }
+        response = self.client.post(WISH_LIST_URL, payload)
+        self.assertEqual(response.status_code, status.HTTP_201_CREATED)
+        wish_active = WishList.objects.filter(
+            created_by = self.user.get_username(),
+            name = payload['name'],
+            active = True,
+        )
+        self.assertTrue(1 == len(wish_active))
